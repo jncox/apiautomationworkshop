@@ -44,6 +44,7 @@
   :name: _optional_labs
   :hidden:
 
+  github/github
   ansible_modules/ansible_modules
 
 .. toctree::
@@ -69,7 +70,7 @@ What's New
 ++++++++++
 
 - Workshop updated for the following software versions:
-    - AOS|PC 5.9.0
+    - AOS | PC 5.9.0
 
 
 - Optional Lab Updates:

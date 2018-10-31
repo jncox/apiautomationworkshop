@@ -1,12 +1,13 @@
-******************
-REST/HTTP Overview
-******************
+.. _rest_overview:
 
+------------------
+REST/HTTP Overview
+------------------
 
 The REST (Web Services) APIs (i.e. WS-API) allow users to author scripts or integrate with 3^rd^ platform solutions, designed to automate the execution of system administration commands against a Nutanix endpoint or resource. The API is designed to expose backend data of a Nutanix cluster that can be read or written to using Hypertext Transfer Protocol (HTTP).
 
 Hypertext Transfer Protocol (HTTP)
-**********************************
+++++++++++++++++++++++++++++++++++
 
 The Hypertext Transfer Protocol (HTTP) is an application-level protocol for distributed, collaborative, hypermedia information systems, and is the foundation for data communication for the World Wide Web. HTTP is a generic and stateless protocol which can be used for other purposes (i.e. Web Services, or RESTful API’s), including extensions of built-in request methods, error codes, and headers.
 
@@ -19,7 +20,7 @@ Client: sends a request-line to the server in the form of a request-method, URI,
 Server: responds with a status-line, including the message's protocol-version and a status-code (success or error code), followed by a MIME-like message containing server information, entity meta information, and possibly entity-body content (i.e. JSON).
 
 HTTP Uniform Resource Identifier (URI)
-**************************************
+++++++++++++++++++++++++++++++++++++++
 
 HTTP makes use of the Uniform Resource Identifier (URI) to identify a given resource and establish a connection. Once the connection is established, HTTP messages are passed between client and server. These messages include requests from client to server and responses from server to client: HTTP-message = <Request> | <Response> ; [^1]HTTP/1.1 messages
 
@@ -28,7 +29,7 @@ Uniform Resource Identifiers (URI) are formatted, case-insensitive strings conta
 [^2]URI = “http:” “//” host [“:” port] [abs_path [“?” query]]
 
 HTTP Request/Response Message
-*****************************
++++++++++++++++++++++++++++++
 
 HTTP request(s) and response(s) use a generic message format for transferring required data. This generic message format consists of the following:
 
@@ -68,9 +69,8 @@ message-body (optional):
 
 The message carries the entity-body associated with the request or response. If entity-body is present, **content-type **and content-length header lines specify the nature of the body (in the context of a REST API’s content-type: application/json, content-length: size of JSON in bytes).
 
-
 JSON Message-Body
-*****************
++++++++++++++++++
 
 Both the request and response message payloads in REST API implementations use a lightweight, self-describing data-interchange referred to as JavaScript Object Notation (JSON) used to structure data (as text) composed of objects containing <key,value> pairs, or arrays of objects. Since JSON format is text, it can easily be sent to and from a server, and consumed by any programming language.
 
@@ -103,4 +103,3 @@ The following JSON example defines a Nutanix “disks” array, containing 3 “
     {“disk”:{ "vendor":"seagate", "type":"hdd", "capacity":8000000000000,“encrypted”: false}, “device_bus”=”scsi”},
     {“disk”:{ "vendor":"toshiba", "type":"ssd",  "capacity":1200000000000,“encrypted”: false}, “device_bus”=”scsi”}
 ]}
-
